@@ -26,7 +26,7 @@ class App extends Component {
   videoSearch = _.debounce((term) => { this.searchYoutube(term) }, 300);
 
 
-  searchYoutube(term) {
+  searchYoutube = (term) =>{
     YTSearch({ key: API_KEY, term: term}, (videos) => {
       this.setState({
         videos: videos,
@@ -35,19 +35,22 @@ class App extends Component {
     });
   }
 
+  handleVideoSelect= (selectedVideo)=>{
+    this.setState({selectedVideo})
+
+  }
+
   render() {
-    console.log(this.state.sele)
+    const {selectedVideo,videos}=this.state
     return (
       <div>
-        <NavBar siteTitle='YouTube App' />
-        <div className="container">
-          <SearchBar
-            onChange={searchTerm => this.videoSearch(searchTerm)} />
-          <VideoPlayer video={this.state.selectedVideo} />
-          <VideoList
-            onVideoSelect={(selectedVideo) => {this.setState({selectedVideo})}}
-            videos={this.state.videos}
-            />
+        <div className="row">
+          <div className="col-sm-1" ><NavBar siteTitle='YouTube App' /></div>
+          <div className="col-sm-8"><SearchBar   onChange={searchTerm => this.videoSearch(searchTerm)} /></div>
+        </div>
+        <div className="container" >
+          <VideoPlayer video={selectedVideo} />
+          <VideoList onVideoSelect={this.handleVideoSelect} videos={videos}/>
         </div>
       </div>
     );

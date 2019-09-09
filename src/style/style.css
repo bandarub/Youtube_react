@@ -1,0 +1,49 @@
+.logo{
+  width: 80px;
+  flex:none;
+}
+.nav-bar{
+    text-align: left;
+    margin-left:10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.container{
+  max-width:1140px;
+}
+  
+  #site-title {
+     font-size: 20px;
+    padding: 10px;
+  }
+  
+  .search-bar {
+    margin: 30px;
+    text-align: center;
+  }
+  
+  .search-bar input {
+    width: 75%;
+  }
+  
+  .video-item img {
+    max-width: 64px;
+  }
+  
+  .video-detail .details {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  .list-group-item:hover {
+    background-color: #eee;
+  }

@@ -3,6 +3,7 @@ This project hav been developing using [youtube api](https://developers.google.c
 
 ### `To run the application`
 Clone the repository <br>
+cd `Youtube_react`<br>
 run `yarn`<br>
 run `yarn start`
 Runs the app in the development mode.<br>

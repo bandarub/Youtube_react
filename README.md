@@ -4,7 +4,7 @@ This project hav been developing using (youtube api)[https://developers.google.c
 ### `To run the application`
 Clone the repository <br>
 run `yarn`<br>
-run `yanr start`
+run `yarn start`
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
